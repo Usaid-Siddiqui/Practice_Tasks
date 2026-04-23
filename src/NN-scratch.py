@@ -3,6 +3,9 @@ import sys
 from random import random
 from random import seed
 import numpy as np
+from tensorflow.keras.datasets.mnist import load_data
+
+(x_train, y_train), (x_test, y_test) = load_data()
 
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
@@ -30,3 +33,6 @@ seed(42)
 network = init_network([3,1,2])
 for layer in network:
     print(layer)
+
+sample_x = x_train[1].flatten()
+print(np.shape(sample_x))
