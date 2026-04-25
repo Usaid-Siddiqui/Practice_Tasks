@@ -55,6 +55,9 @@ def activate(weights, inputs):
     return activation
 
 
+def back_prop(network, outputs):
+    return
+
 seed(42)
 network = init_network([3,1,2])
 for layer in network:
